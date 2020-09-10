@@ -15,16 +15,21 @@ def index():
 
     desc = []
     news = []
+    url = []
     img = []
+    
 
     for i in range(len(articles)):
         myarticles = articles[i]
 
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
+        url.append(myarticles['url'])
         img.append(myarticles['urlToImage'])
+        
 
-    mylist = zip(news, desc, img)    
+
+    mylist = zip(news, desc, url, img)    
 
     return render_template('index.html', context = mylist)
 
@@ -38,16 +43,20 @@ def bbc():
 
     desc = []
     news = []
+    url = []
     img = []
+    
 
     for i in range(len(articles)):
         myarticles = articles[i]
 
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
+        url.append(myarticles['url'])
         img.append(myarticles['urlToImage'])
+      
 
-    mylist = zip(news, desc, img)    
+    mylist = zip(news, desc, url, img)    
 
     return render_template('bbc.html', context = mylist)
 

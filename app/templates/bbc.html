@@ -8,18 +8,19 @@
 <body>
     <div class="jumbotron" style="color: black;">
     <h1 style="color: black;">
-    All The Time News Center
+    News Center
     </h1>
     
     </div>
 
      <div class="container">
 
-        {% for new, des, i in context %}
+        {% for new, des, url, i in context %}
 
           <img src="{{i}}">
           <h3>News: </h3>  {{new}}
           <h4>Description: </h4> {{des}}
+          <a href="{{url}}" type="button" class="btn btn-outline-primary" target="_blank">Read More</a>
 
            {% endfor %}
 
