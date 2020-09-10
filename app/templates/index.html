@@ -6,6 +6,21 @@
     <title>Abc news kenya</title>
 </head>
 <body>
+    <div class="jumbotron" style="color: black;">
+    <h1 style="color: black;">
+    All The Time News Center
+    </h1>
+    
+    </div>
+
+     <div class="container">
+          {% for new, des, i in content %}
+          <img src="{{i}}">
+          <h3>News</h3>{{new}}
+          <h4>Description</h4> {{desc}}
+          { % endfor % }
+
+     </div>
     
 </body>
 </html>
