@@ -1,8 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template
 from newsapi import NewsApiClient
+import os
 
 
-App = Flask(__name__)
+app = Flask(__name__)
 
 @app.route('/')
 def index():
@@ -22,5 +23,12 @@ def index():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
+
+    nowlist = zip(news, desc, img)    
+
+    return render_template('index.html', context = nowlist)
+
+if __name__ == "__main__":
+    app.run(debug=True)
 
 
