@@ -16,14 +16,15 @@
     
     </div>
 
-     <div class="container">
+     <div class="container" style="text-align: center;">
           {% for new, des, url, i in context %}
 
-          <img src="{{i}}">
-          <h3>News: </h3>  {{new}}
-          <h4>Description: </h4> {{des}}
+          <img src="{{i}}" alt="Image">
+          <h3><b>News: </b>{{new}}</h3>  
+          <h4><i>Description: </i> {{des}}</h4> 
+          <div>
           <a href="{{url}}" type="button" class="btn btn-outline-primary" target="_blank">Read More</a>
-
+          </div>
           {% endfor %}
 
      </div>
