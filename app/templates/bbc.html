@@ -14,13 +14,14 @@
     </div>
 
      <div class="container">
-          { % for new, des, i in context % }
+
+        {% for new, des, i in context %}
 
           <img src="{{i}}">
           <h3>News: </h3>  {{new}}
           <h4>Description: </h4> {{des}}
 
-          { % endfor % }
+           {% endfor %}
 
      </div>
     

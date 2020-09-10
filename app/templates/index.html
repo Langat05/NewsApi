@@ -6,6 +6,7 @@
     <title>Abc News </title>
 </head>
 <body>
+
     <div class="jumbotron" style="color: black;">
     <h1 style="color: black;">
     All The Time News Center
@@ -14,13 +15,13 @@
     </div>
 
      <div class="container">
-          { % for new, des, i in context % }
+          {% for new, des, i in context %}
 
           <img src="{{i}}">
           <h3>News: </h3>  {{new}}
           <h4>Description: </h4> {{des}}
 
-          { % endfor % }
+          {% endfor %}
 
      </div>
     
