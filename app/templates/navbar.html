@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Navbar</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
-<body onload="startTime()">
-  <div id="txt" style="padding-left: 50%;font-size: 30PX; font-weight: bolder;"></div>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- Brand -->
-  <a class="navbar-brand" href="#"><b>NEWS CENTER</b></a>
+  <head>
+    <title>Navbar</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body onload="startTime()">
+    <div
+      id="txt"
+      style="padding-left: 50%; font-size: 30px; font-weight: bolder"
+    ></div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#"><b>NEWS CENTER</b></a>
 
-  <!-- Links -->
-  <ul class="navbar-nav" style="padding-left: 200px;">
-    <li class="nav-item">
-      <a class="nav-link" href="index.html" style="color: white;"><b>Home</b></a>
-    </li><br>
+      <!-- Links -->
+      <ul class="navbar-nav" style="padding-left: 200px">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('index') }}" style="color: white"
+            ><b>Home</b></a
+          >
+        </li>
+        <br />
 
-    <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color: white;padding-left: 50px;">
-        <b>More News</b>
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#index.html">Abc News</a>
-        <a class="dropdown-item" href="bbc.html">Bbc news</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
-    </li>
-  </ul>
-</nav>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbardrop"
+            data-toggle="dropdown"
+            style="color: white; padding-left: 50px"
+          >
+            <b>More News</b>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{ url_for('bbc') }}">BBC News</a>
+            <a class="dropdown-item" href="{{ url_for('index') }}">ABC News</a>
+            <a class="dropdown-item" href="{{ url_for('fox') }}">FOX News</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
 
-<script>
-    function startTime() {
-      var today = new Date();
-      var h = today.getHours();
-      var m = today.getMinutes();
-      var s = today.getSeconds();
-      m = checkTime(m);
-      s = checkTime(s);
-      document.getElementById('txt').innerHTML =
-      h + ":" + m + ":" + s;
-      var t = setTimeout(startTime, 500);
-    }
-    function checkTime(i) {
-      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-      return i;
-    }
-</script>
+    <script>
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        } // add zero in front of numbers < 10
+        return i;
+      }
+    </script>
 
-<br>
-</body>
+    <br />
+  </body>
 </html>
