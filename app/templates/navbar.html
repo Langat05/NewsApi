@@ -9,22 +9,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body>
-
+<body onload="startTime()">
+  <div id="txt" style="padding-left: 50%;font-size: 30PX; font-weight: bolder;"></div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
   <a class="navbar-brand" href="#"><b>NEWS CENTER</b></a>
 
   <!-- Links -->
-  <ul class="navbar-nav">
+  <ul class="navbar-nav" style="padding-left: 200px;">
     <li class="nav-item">
-      <a class="nav-link" href="index.html">Home</a>
-    </li>
+      <a class="nav-link" href="index.html" style="color: white;"><b>Home</b></a>
+    </li><br>
 
     <!-- Dropdown -->
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        More News
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color: white;padding-left: 50px;">
+        <b>More News</b>
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="#index.html">Abc News</a>
@@ -34,6 +34,25 @@
     </li>
   </ul>
 </nav>
+
+<script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =
+      h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+</script>
+
 <br>
 </body>
 </html>
