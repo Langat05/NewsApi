@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <title>FOX news</title>
+    <title>CNN news</title>
   </head>
   <body>
     <!-- navbar block here-->
     {% block navbar %} {% include 'navbar.html' %} {% endblock %}
 
     <div class="container">
-      <h1 style="text-align: center;"><b>FOX NEWS</b></h1>
+      <h1 style="text-align: center;"><b>CNN NEWS</b></h1>
       {% for new, des, url, i in context %}
 
       <img src="{{i}}" />
