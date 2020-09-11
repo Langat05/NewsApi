@@ -8,14 +8,10 @@
     <title>Abc News </title>
 </head>
 <body>
-    
-
-    <div class="jumbotron" style="color: black;">
-    <h1 style="color: black;">
-     News Center
-    </h1>
-    
-    </div>
+    <!-- navbar block here-->
+    {% block navbar %}
+    {% include 'navbar.html' %}
+    {% endblock %}
 
      <div class="container" style="text-align: center;">
           {% for new, des, url, i in context %}
