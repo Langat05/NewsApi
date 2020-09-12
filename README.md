@@ -1,5 +1,9 @@
 # NEWSAPI
 
+## Author
+
+Langat K Justus
+
 ## Description
 
 This is an application that uses an api to display news from different sources. News from different channels autoupdate each and every time. The user can choose on different channel news they preffer and can be able to read the full article news.
@@ -24,6 +28,10 @@ Flask
 Html5
 Bootstrap
 Javascript
+
+## Codebeat
+
+[![codebeat badge](https://codebeat.co/badges/68954112-ce05-423b-bb20-8327e4794dec)](https://codebeat.co/projects/github-com-langat05-newsapi-master)
 
 ## Contact Details
 
