@@ -12,12 +12,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
-  <body onload="startTime()">
+  <body onload="startTime()" style="background-color: darkkhaki;">
     <div
       id="txt"
-      style="padding-left: 50%; font-size: 30px; font-weight: bolder"
+      style="padding-left: 0.7%; font-size: 30px; font-weight: bolder; position: fixed; padding-top: 50px;"
     ></div>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="position:fixed;width: 100%;">
       <!-- Brand -->
       <a class="navbar-brand" href="#"><b>NEWS CENTER</b></a>
 
@@ -37,7 +37,7 @@
             href="#"
             id="navbardrop"
             data-toggle="dropdown"
-            style="color: white; padding-left: 50px"
+            style="color: white; padding-left: 70px"
           >
             <b>More News</b>
           </a>
@@ -50,7 +50,6 @@
         </li>
       </ul>
     </nav>
-
     <script>
       function startTime() {
         var today = new Date();
@@ -69,7 +68,6 @@
         return i;
       }
     </script>
-
     <br />
   </body>
 </html>
