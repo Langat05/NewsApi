@@ -17,6 +17,7 @@ def index():
     news = []
     url = []
     img = []
+    
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -25,6 +26,7 @@ def index():
         desc.append(myarticles['description'])
         url.append(myarticles['url'])
         img.append(myarticles['urlToImage'])
+        
 
     mylist = zip(news, desc, url, img)
 
@@ -42,6 +44,7 @@ def bbc():
     news = []
     url = []
     img = []
+    
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -67,6 +70,7 @@ def cnn():
     news = []
     url = []
     img = []
+   
 
     for i in range(len(articles)):
         myarticles = articles[i]

@@ -13,13 +13,13 @@
     <!-- navbar block here-->
     {% block navbar %} {% include 'navbar.html' %} {% endblock %}
 
-    <div class="container" style="text-align: center; padding-top: 70px;">
-        <h1><B>ABC NEWS</B></h1>
+    <div class="container">
+        <h1 style="text-align: center; padding-top: 70px;"><B>ABC NEWS</B></h1>
       {% for new, des, url, i in context %}
 
       <img src="{{i}}" alt="Image" />
-      <h3><b>News: </b>{{new}}</h3>
-      <h4><i>Description: </i> {{des}}</h4>
+      <h3><b>News<br> </b>{{new}}</h3>
+      <h4><b>Description</b> <br> {{des}}</h4>
       <div>
         <a
           href="{{url}}"

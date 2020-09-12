@@ -17,9 +17,9 @@
       <h1 style="text-align: center; padding-top: 70px;"><b>CNN NEWS</b></h1>
       {% for new, des, url, i in context %}
 
-      <img src="{{i}}" />
-      <h3><b>News:</b> {{new}}</h3>
-      <h4><i>Description:</i> {{des}}</h4>
+      <img src="{{i}}" alt="Image" />
+      <h3><b>News<br> </b>{{new}}</h3>
+      <h4><b>Description</b> <br> {{des}}</h4>
       <div>
         <a
           href="{{url}}"
