@@ -1,3 +1,6 @@
+import unittest
+from app.models import News
+
 class News:
     '''
     News class to define News Objects
@@ -10,7 +13,7 @@ class News:
         self.urlToImage = urlToImage
 
 import unittest
-from models import news , articles
+from models import news 
 News = news.news
 
 class NewsTest(unittest.TestCase):

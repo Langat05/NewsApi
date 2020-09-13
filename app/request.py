@@ -13,7 +13,7 @@ def get_news(source):
     '''
     Function that gets the json responce to our url request
     '''
-    get_news_url = base_url + api_key
+    get_news_url = api_key
 
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
